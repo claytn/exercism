@@ -1,0 +1,91 @@
+
+==================== FINAL INTERFACE ====================
+2018-01-18 20:06:29.678658 UTC
+
+interface leap-1.3.0.6-2ImAYgMC9Ay5QGoF3TkkNb:LeapYear 8022
+  interface hash: c2d6ea400837ede3cc092241a2fcce15
+  ABI hash: e88f7f476606ddf586e1623a4f1c42dd
+  export-list hash: 95403bae7ca7eee83cf5f19964cf47c3
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 0451a77cc0d8e5d99d548d6441c7dd35
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  LeapYear.isLeapYear
+module dependencies:
+package dependencies: base-4.10.1.0* ghc-prim-0.5.1.1
+                      integer-gmp-1.0.1.0
+orphans: base-4.10.1.0:GHC.Float base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Either base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Type.Equality base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.Real 3c62834bc25e762eabc44149c4cc142d
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
+import  -/  integer-gmp-1.0.1.0:GHC.Integer.Type 5fa81108482c33b62ec3ac7464eece96
+d57a92f3090353b7b5b8c628586402d4
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   LeapYear.$trModule3
+                   LeapYear.$trModule1) -}
+beafee15015bb9bc5c8eaa3cdd077eca
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS LeapYear.$trModule2) -}
+70212af267ab4d52fdc74a4c96703a46
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("LeapYear"#) -}
+e3c1b4b6b396e29e1e10983e211f8e42
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS LeapYear.$trModule4) -}
+c17d9ce3b0bfc5b3a4b9f79b7ffe33db
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("leap-1.3.0.6-2ImAYgMC9Ay5QGoF3TkkNb"#) -}
+7353d06a2c0f516e01d016421bdc5c56
+  isLeapYear :: GHC.Integer.Type.Integer -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (year :: GHC.Integer.Type.Integer) ->
+                 case GHC.Integer.Type.eqInteger#
+                        (GHC.Integer.Type.remInteger year LeapYear.isLeapYear4)
+                        LeapYear.isLeapYear3 of wild { DEFAULT ->
+                 case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild of wild1 {
+                   GHC.Types.False
+                   -> case GHC.Integer.Type.eqInteger#
+                             (GHC.Integer.Type.remInteger year LeapYear.isLeapYear2)
+                             LeapYear.isLeapYear3 of wild2 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild2 of wild3 {
+                        GHC.Types.False
+                        -> case GHC.Integer.Type.eqInteger#
+                                  (GHC.Integer.Type.remInteger year LeapYear.isLeapYear1)
+                                  LeapYear.isLeapYear3 of wild4 { DEFAULT ->
+                           GHC.Prim.tagToEnum# @ GHC.Types.Bool wild4 }
+                        GHC.Types.True -> GHC.Types.False } }
+                   GHC.Types.True -> GHC.Types.True } }) -}
+fde33efc8338254b7be885484ded8f29
+  isLeapYear1 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (4) -}
+777844168c2a22f285fce6529409ae0f
+  isLeapYear2 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (100) -}
+50d463686bace6513b0aba4418596072
+  isLeapYear3 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+359f446bf2ddb94ea32a0f501e23f773
+  isLeapYear4 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (400) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
