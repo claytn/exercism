@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2018-01-19 03:38:51.605897 UTC
+2018-01-19 20:38:59.480183 UTC
 
 interface bob-1.2.0.5-41cfZtqo8NrIe4DcDwBya:Bob 8022
-  interface hash: 9887e7cfb026f320b3e37427491bc23c
-  ABI hash: 6fd7fb3d0a1578888f3098d63e109728
+  interface hash: 475950692b8c57cf13a2643721e8c26f
+  ABI hash: 3524483a50b27a77c3a4f281d4a3bcb5
   export-list hash: 89b87cbbcf8aba598c8c607dbb48b880
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 0451a77cc0d8e5d99d548d6441c7dd35
@@ -79,32 +79,29 @@ import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
                                   DEFAULT -> GHC.Types.True 160## -> GHC.Types.False }
                              GHC.Types.True -> GHC.Types.False }
                         32## -> GHC.Types.False } }) -}
-3e4513a617ba3d7c6367b5be1435b791
+3e61b1dd3ae8594f49117431a41fffd3
+  isQuestion :: GHC.Base.String -> GHC.Types.Bool
+  {- Arity: 1, Strictness: <S,1*U> -}
+5cc522b03bee68badc783d0a9e262ee2
   responseFor :: GHC.Base.String -> GHC.Base.String
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: (\ (xs :: GHC.Base.String) ->
                  let {
-                   question :: GHC.Types.Bool
-                   = case Bob.responseFor_go3 xs of wild {
-                       [] -> GHC.Types.False
-                       : ds1 ds2
-                       -> Bob.responseFor_go2 wild (GHC.List.lastError @ GHC.Types.Char) }
+                   question :: GHC.Types.Bool = Bob.isQuestion xs
                  } in
                  let {
-                   exclamation :: GHC.Types.Bool
+                   yelling :: GHC.Types.Bool
                    = case Bob.responseFor_go1 xs of wild {
-                       []
+                       [] -> GHC.Types.False
+                       : ds1 ds2
                        -> case Bob.responseFor_go xs of wild1 {
-                            [] -> GHC.Types.False
-                            : ds1 ds2
-                            -> GHC.Base.eqString (GHC.Types.[] @ GHC.Types.Char) wild1 }
-                       : ds1 ds2 -> GHC.Base.eqString wild (Bob.responseFor_go xs) }
+                            [] -> GHC.Types.False : ds4 ds5 -> GHC.Base.eqString wild wild1 } }
                  } in
                  let {
                    $j :: [GHC.Types.Char] <join 0>
                    = case question of wild {
                        GHC.Types.False
-                       -> case exclamation of wild1 {
+                       -> case yelling of wild1 {
                             GHC.Types.False
                             -> case GHC.List.filter
                                       @ GHC.Types.Char
@@ -117,7 +114,7 @@ import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
                  case question of wild {
                    GHC.Types.False -> $j
                    GHC.Types.True
-                   -> case exclamation of wild1 {
+                   -> case yelling of wild1 {
                         GHC.Types.False -> $j GHC.Types.True -> Bob.responseFor1 } }) -}
 0c089e2afbf3af96301b16db6575895c
   responseFor1 :: [GHC.Types.Char]
@@ -161,13 +158,6 @@ bae8f99dee5afbe454b361ddf17734b8
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
 ff7f2461c216afeda61dbfe006e8f495
   responseFor_go1 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
-373599b55331a4aa95c2c1859b465946
-  responseFor_go2 ::
-    [GHC.Types.Char] -> GHC.Types.Char -> GHC.Types.Bool
-  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U(1*U)> -}
-ef4003916af899ec8e72a1275048fd7a
-  responseFor_go3 :: [GHC.Types.Char] -> [GHC.Types.Char]
   {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
 vectorised variables:
 vectorised tycons:
