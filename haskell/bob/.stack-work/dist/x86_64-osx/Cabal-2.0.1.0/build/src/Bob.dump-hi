@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2018-01-19 20:38:59.480183 UTC
+2018-01-19 20:43:08.62065 UTC
 
 interface bob-1.2.0.5-41cfZtqo8NrIe4DcDwBya:Bob 8022
-  interface hash: 475950692b8c57cf13a2643721e8c26f
-  ABI hash: 3524483a50b27a77c3a4f281d4a3bcb5
+  interface hash: b0194d94dfc783228e453f2348ffa9ab
+  ABI hash: 5c0fbf06d4cde3ad7006109899c452be
   export-list hash: 89b87cbbcf8aba598c8c607dbb48b880
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 0451a77cc0d8e5d99d548d6441c7dd35
@@ -82,7 +82,7 @@ import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
 3e61b1dd3ae8594f49117431a41fffd3
   isQuestion :: GHC.Base.String -> GHC.Types.Bool
   {- Arity: 1, Strictness: <S,1*U> -}
-5cc522b03bee68badc783d0a9e262ee2
+d8eaaa1cf10f6cc4eb12df65fc02dba3
   responseFor :: GHC.Base.String -> GHC.Base.String
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: (\ (xs :: GHC.Base.String) ->
@@ -91,10 +91,16 @@ import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
                  } in
                  let {
                    yelling :: GHC.Types.Bool
-                   = case Bob.responseFor_go1 xs of wild {
+                   = case GHC.List.filter
+                            @ GHC.Types.Char
+                            GHC.Unicode.isAlpha
+                            xs of wild {
                        [] -> GHC.Types.False
                        : ds1 ds2
-                       -> case Bob.responseFor_go xs of wild1 {
+                       -> case GHC.List.filter
+                                 @ GHC.Types.Char
+                                 GHC.Unicode.isUpper
+                                 xs of wild1 {
                             [] -> GHC.Types.False : ds4 ds5 -> GHC.Base.eqString wild wild1 } }
                  } in
                  let {
@@ -153,12 +159,6 @@ f7f693b4a699e4f43c90bd4a337942ab
 bae8f99dee5afbe454b361ddf17734b8
   responseFor9 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString# Bob.responseFor10) -}
-086bb5632c07fed0c0ec0816ba154697
-  responseFor_go :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
-ff7f2461c216afeda61dbfe006e8f495
-  responseFor_go1 :: [GHC.Types.Char] -> [GHC.Types.Char]
-  {- Arity: 1, HasNoCafRefs, Strictness: <S,1*U> -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:

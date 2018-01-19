@@ -14,8 +14,8 @@ isYelling xs
     | null alphaList || null upperAlphaList = False
     | alphaList == upperAlphaList           = True
     | otherwise                             = False
-    where alphaList      = [x | x <- xs, (isAlpha x)]
-          upperAlphaList = [x | x <- xs, (isUpper x)]
+    where alphaList      = filter isAlpha xs
+          upperAlphaList = filter isUpper xs
 
 isNothing :: String -> Bool
 isNothing xs = null (filter (\c -> not $ isSpace c) xs)
